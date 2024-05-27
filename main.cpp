@@ -6,7 +6,6 @@ int main(){
 
     double price = 22.9;
 
-    std::cout << days << "\n";
     std::cout << age << "\n";
     std::cout << price << "\n";
     return 0;
