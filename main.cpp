@@ -1,12 +1,15 @@
 #include <iostream>
 
+namespace first{
+    int x = 1;
+}
+
+namespace second{
+    int x = 2;
+}
+
 int main(){
-    int days  = 1;
-    int age = 23.3;
-
-    double price = 22.9;
-
-    std::cout << age << "\n";
-    std::cout << price << "\n";
+    using namespace second;
+    std::cout << x;
     return 0;
 }
