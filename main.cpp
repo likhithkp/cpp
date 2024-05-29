@@ -1,26 +1,23 @@
 #include <iostream>
 
 int main(){
-    char grade;
+    double temp;
+    bool isSunny = true;
 
-    std::cout << "Enter your grade";
-    std::cin >> grade;
+    std::cout << "Enter the temperature";
+    std::cin >> temp;
 
-    switch (grade){
-        case 'A':
-            std::cout << "You did great";
-            break;
-        case 'B':
-            std::cout << "You did fine";
-            break;
-        case 'C':
-            std::cout << "Study hard...";
-            break;
-        case 'D':
-            std::cout << "You will be hanged to death for 5 years";
-            break;
-        default:
-            std::cout << "Please enter grade in caps(A-D)";
+    if(temp >=0 && temp <= 30){
+        std::cout << "The temperature is great\n";
+    }else{
+        std::cout << "The temperature is bad\n";
+        !isSunny;
+    }
+
+    if(!isSunny){
+        std::cout << "It is not sunny";
+    } else {
+        std::cout << "It is sunny";
     }
 
     return 0;
