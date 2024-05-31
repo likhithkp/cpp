@@ -1,48 +1,22 @@
 #include <iostream>
 
-double balance = 10000;
-
-void showBalance(){
-    std::cout << "Your balance is " << balance;
-    return;
-}
-
-double addMoney(double money){
-    std::cout << "Enter the amount to be added \n";
-    std::cin >> money;
-    return balance + money;
-}
-
-double withDraw(double money){
-    std::cout << "Enter the amount to be withdrawn \n";
-    std::cin >> money;
-    return balance - money;
-}
-
 int main(){
-    double amount = 0;
-    char option = 'x';
+    std::string name = "Likhith KP erb wrfwr rff3f34 24fr3";
+    std::string names[] = {"Likhith KP", "Shiba", "Kumar", "Lauda"};
+    int age = 2;
+    double price = 22.45;
+    char grade = 'A';
+    char grades[] = {'A', 'B', 'C', 'D'};
+    bool isHot = true;
 
-    std::cout << "*******************\n";
-    std::cout << "Welome to your bank\n";
-    std::cout << "*******************\n";
-    std::cout << "Select between (b - balance, w - withdraw, a - add, e - exit)\n";
-    std::cin >> option;
+    std::cout << sizeof(name) << '\n';
+    std::cout << sizeof(names) << '\n';
+    std::cout << sizeof(age) << '\n';
+    std::cout << sizeof(price) << '\n';
+    std::cout << sizeof(grade) << '\n';
+    std::cout << sizeof(grades) << '\n';
+    std::cout << sizeof(isHot) << '\n';
 
-    do{
-        switch(option){
-            case 'b': showBalance();
-                    break;
-            case 'a': addMoney(amount);
-                    break;
-            case 'w': double result = withDraw(amount);
-                    std::cout << "The updated balance is " << result;
-                    break;
-            case 'e': std::cout << "Thank you for visting your bank\n";
-                    break;
-            default: std::cout << "Not a valid option, select between (b - balance, w - withdraw, a - add, e - exit)\n";
-        }
-    }while(option != 'e');
     return 0;
 }
 
