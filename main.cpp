@@ -1,21 +1,19 @@
 #include <iostream>
 
-int main(){
-    std::string name = "Likhith KP erb wrfwr rff3f34 24fr3";
-    std::string names[] = {"Likhith KP", "Shiba", "Kumar", "Lauda"};
-    int age = 2;
-    double price = 22.45;
-    char grade = 'A';
-    char grades[] = {'A', 'B', 'C', 'D'};
-    bool isHot = true;
+double getTotal(double prices[], int size){
+    double total = 0;
+    for(int i = 0; i < size; i++){
+        total += prices[i];
+    }
+    return total;
+}
 
-    std::cout << sizeof(name) << '\n';
-    std::cout << sizeof(names) << '\n';
-    std::cout << sizeof(age) << '\n';
-    std::cout << sizeof(price) << '\n';
-    std::cout << sizeof(grade) << '\n';
-    std::cout << sizeof(grades) << '\n';
-    std::cout << sizeof(isHot) << '\n';
+int main(){
+    double prices[] = {5500.78, 4500.34, 55.07};
+    int size = sizeof(prices)/sizeof(double);
+
+    double result = getTotal(prices, size);
+    std::cout << result << '\n';
 
     return 0;
 }
