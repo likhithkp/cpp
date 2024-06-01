@@ -1,21 +1,31 @@
 #include <iostream>
 
-double getTotal(double prices[], int size){
-    double total = 0;
+int getIndex(std::string array[], int size, std::string element){
     for(int i = 0; i < size; i++){
-        total += prices[i];
+        if(array[i] == element){
+            return i;
+        }
     }
-    return total;
+    return -1;
 }
 
 int main(){
-    double prices[] = {5500.78, 4500.34, 55.07};
-    int size = sizeof(prices)/sizeof(double);
+    std::string foods[5] = {"burger", "pizza", "paratha", "poori", "idli"};
+    int size = sizeof(foods)/sizeof(std::string);
+    std::string myFood;
+    int index;
 
-    double result = getTotal(prices, size);
-    std::cout << result << '\n';
+    std::cout << "Enter the food\n"; 
+    std::getline(std::cin, myFood);
+
+    index = getIndex(foods, size, myFood);
+
+    if(index != -1 ){
+        std::cout << "The food is in the index " << index; 
+    }else {
+        std::cout << "The food is not in the index\n";
+    }
+
 
     return 0;
 }
-
-
