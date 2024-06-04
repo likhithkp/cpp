@@ -1,34 +1,29 @@
 #include<iostream>
 
-struct car{
-    std::string brand;
-    std::string name;
-    double mileage;
-    std::string color;
+class Student{
+    public:
+        std::string name;
+        int age;
+        std::string branch;
+        std::string usn;
+
+        void greet(){
+            std::cout << "Hello from " << name << '\n';
+        }
 };
 
-void displayCar(car &x){
-    std::cout << &x << '\n';
-    std::cout << "The car details are" << '\n';
-    std::cout << x.brand << '\n';
-    std::cout << x.name << '\n';
-    std::cout << x.mileage << '\n';
-    std::cout << x.color << '\n';
-}
-
-void paintCar(car &x, std::string color){
-    x.color = color;
-}
-
 int main(){
-    car bmw;
-    bmw.brand = "BMW";
-    bmw.name = "5 series";
-    bmw.mileage = 9.82;
-    bmw.color = "Metallic blue";
+    Student student1;
 
-    std::cout << &bmw << '\n';
-    paintCar(bmw, "Gold");
-    displayCar(bmw);
+    student1.name = "Shiba Kumar";
+    student1.age = 23;
+    student1.branch = "CSE";
+    student1.usn = "4CP22CS876";
+
+    std::cout << student1.name << '\n';
+    std::cout << student1.age << '\n';
+    std::cout << student1.branch << '\n';
+    std::cout << student1.usn << '\n';
+    student1.greet();
     return 0;
 }
