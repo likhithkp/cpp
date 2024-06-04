@@ -1,18 +1,13 @@
 #include<iostream>
-
-class Car{
-    private:
-        void drive(){
-            std::cout << "Car has started and is moving";
-        };
-    public:
-        void getDrive(){
-            drive();
-        }
-};
+#include<vector>
 
 int main(){
-    Car car1;
-    car1.getDrive();
+    std::vector<int> a(5, 1);
+    std::cout << "Size " << a.size() << '\n';
+    std::cout << "Capacity " << a.capacity() << '\n';
+
+    for(int i : a){
+        std::cout << a[i];
+    }
     return 0;
 }
