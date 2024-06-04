@@ -1,14 +1,18 @@
 #include<iostream>
-#include<list>
+#include<stack>
 
 int main(){
-    std::list<int> l;
-    l.push_front(1);
-    l.push_back(2);
+    std::stack<std::string> s;
 
-    l.erase(l.begin());
-    for(int i: l){
-        std::cout << i << '\n';
-    }
+    s.push("Likhith");
+    s.push("Shiba");
+    s.push("Lauda");
+
+    std::cout << s.top() << '\n';
+    s.pop();
+    std::cout << s.top() << '\n';
+    std::cout << s.size() << '\n';
+    std::cout << s.emplace() << '\n';
+
     return 0;
 }
