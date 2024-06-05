@@ -1,18 +1,21 @@
 #include<iostream>
-#include<stack>
+#include<map>
 
 int main(){
-    std::stack<std::string> s;
+    std::map<int, std::string> m;
 
-    s.push("Likhith");
-    s.push("Shiba");
-    s.push("Lauda");
+    m[1] = "Hello";    
+    m[2] = "Likhith";    
+    m[3] = "Shiba";    
+    m[22] = "Lauda";   
 
-    std::cout << s.top() << '\n';
-    s.pop();
-    std::cout << s.top() << '\n';
-    std::cout << s.size() << '\n';
-    std::cout << s.emplace() << '\n';
+    m.insert({12, "Cobra"});
+
+    for(auto v : m){
+        std::cout << v.first << " " << v.second << " " << "\n";
+    }; 
+
+    std::cout << m.count(3) << '\n';
 
     return 0;
 }
