@@ -1,21 +1,13 @@
 #include<iostream>
-#include<map>
+#include<vector>
 
 int main(){
-    std::map<int, std::string> m;
+    std::vector<int> age;
+    age.push_back(1);
+    age.push_back(1);
+    age.push_back(1);
+    age.push_back(1);
 
-    m[1] = "Hello";    
-    m[2] = "Likhith";    
-    m[3] = "Shiba";    
-    m[22] = "Lauda";   
-
-    m.insert({12, "Cobra"});
-
-    for(auto v : m){
-        std::cout << v.first << " " << v.second << " " << "\n";
-    }; 
-
-    std::cout << m.count(3) << '\n';
-
+    std::cout << age.size() << '\n';
     return 0;
 }
